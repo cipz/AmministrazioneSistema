@@ -1,0 +1,94 @@
+\chapter{Attività e risorse di supporto}\label{ch:supporto}
+
+In questo capitolo vengono descritte le attività ed altre risorse considerate secondarie e che sono di supporto all'implementazione del nuovo sistema informatico dell'\istituto.
+
+Tali risorse possono essere di natura informatica, come hardware, software e altri materiali, o di natura aziendale come strutture, documenti, personale e requisiti di formazione.
+
+\section{Documentazione}
+
+	Per poter illustrare correttamente il nuovo sistema e l'implementazione dell'intero progetto, \azienda~produrrà documenti quali:
+	%TODO rivedere
+	\begin{itemize}[noitemsep]
+		
+		\item \textit{Composizione dei Processi Aziendali}: contiene l'analisi del vecchio sistema gerarchico, la transizione ai nuovi BPR e una descrizione dettagliata di questi;
+		
+		\item \textit{Analisi e architettura della rete e dei sistemi interni}: contiene un'analisi del vecchio sistema informatico a livello architetturale e di rete, la descrizione dettagliata della nuova reta inclusivo di hardware utilizzato e delle postazioni dei dipendenti, il piano di indirizzamento IP e di partizionamento della nuova rete;
+		
+%		\item Organizzazione Centro di Gestione Integrato.
+
+		\item \textit{Documento di avanzamento dei lavori}: questo documento \textit{vivo} conterrà tutti i rapporti che sono stati redatti riguardanti l'avanzamento dei lavori;
+		
+		\item \textit{Documentazione relativa ai test}: tale documento conterrà tutte le informazioni necessarie per quanto riguarda i test (da \textit{unit test} a \textit{test di accettazione}) che sono stati svolti sul sistema e che possono essere rifatti a cadenza temporale precisa, ad esempio all'implementazione di una nuova feature.
+		Una porzione di questo documento può essere dedicata ai rischi, descritti in \ref{sec:rischi}, a come evitarli o mitigarli e a quali test sono stati fatti per poterli prevenire;
+		
+		\item \textit{Documento aggiornato dei ``progetti innovativi''}: vista la richiesta dell'\istituto~di lavorare su progetti innovativi, è necessario tenere traccia di questi in un documento che in costante aggiornamento.
+		Tale documento conterrà la descrizione di ciascun progetto tramite template concordati dai tecnici di \azienda~e del \proponente, in base alle necessità di quest'ultimo.
+		
+	\end{itemize}
+
+	Tali documenti serviranno non solamente ai futuri tecnici dell'\istituto~per capire il funzionamento del sistema, ma anche agli stakeholders, che tramite tali elaborati seguiranno l'avanzamento del progetto.
+
+\section{Materiale informatico}
+
+	Tutto il materiale informatico e realativa documentazione che l'\istituto~possiede dovrà essere messa a disposizione ai dipendenti di \azienda~per poter garantire che tutti i servizi attualmente erogati siano noti durante la transizione e che questi possano essere replicati nel nuovo sistema.
+
+	\subsection{Hardware}
+		
+		% TODO sono corretti i ruoli qui?
+		Come specificato dal \proponente~nel capitolato, tutto l'hardware dell'attuale sistema sarà preso in carica dall'\offerente.
+		Questo include tutta l'infrastruttura tecnologica specificata dall'\istituto~nel capitolato.
+		
+	\subsection{Software}
+	
+		Come per l'hardware, anche il software verrò preso in carica dal \offerente.
+		I sistemi applicativi di tutte le aree verranno messe a disposizione ad \azienda, la quale si prenderà cura di mantenerli attivi durante la transizione e di effettuare backup periodici, completi o incrementali, in caso fosse necessario effettuare un \rollback.
+	
+\section{Strutture}
+
+	Per la corretta installazione del nuovo \helpdesk, e quindi il corretto completamento del progetto, è necessario l'accesso alle strutture ospedaliere.
+	Questo implica una concessione periodica, valida dall'inizio del progetto, delle credenziali e dei permessi di accesso da parte del \proponente~ad \azienda~per poter permettere ai suoi dipendenti di entrare e uscire dagli edifici che compongono l'\istituto.
+
+\section{Personale}
+
+	Anche il personale messo a disposizione dall'istituto rappresenta un asset importante per il corretto svolgimento del progetto.
+	
+	\subsection{Requisiti di staff}
+	
+		Per implementare correttamente il progetto, restando nel tempo e nel budget posti, \azienda~necessita che l'\istituto~metta a disposizione i propri dipendenti di varie aree.
+		
+		\azienda, per riuscire a creare una piattaforma ad hoc, necessita di avere feedback non solamente dai principali stakeholders ma anche da coloro che la useranno giornalmente.
+		Per questo inizialmente verranno somministrati alcuni questionari, non solamente riguardo le feature più utilizzate ma anche sull'interfaccia grafica che adatta all'uso che i dipendenti ne fanno.
+		
+		I tecnici dell'\istituto~verranno affiancati dai dipendenti di \azienda~per trovare la soluzione migliore ai bisogni presentati all'interno del capitolato.
+	
+	\subsection{Formazione dello staff}
+	
+		La formazione dello staff dell'\istituto~da parte di \azienda~è uno step principale per quanto riguarda la riconsegna del progetto.
+		Senza un corretto corso di formazione e un sufficente affiancamento, il personale dell'\istituto~non sarà in grado di utilizzare correttamente i nuovi strumenti sviluppati appositamente da \azienda.
+	
+		\subsubsection{Formazione tecnica}
+			
+			Questa riguarda lo staff che sarà a stretto contatto con il nuovo sistema di \helpdesk~e che dovrà rispondere efficacemente alle richieste degli utenti agendo da \textit{single point of contact}, come spiegato in \ref{sec:scopo_helpdesk}.
+		
+			Tale personale deve essere esperto in materia informatica ed è preferibile che abbia la cartificazione \textit{ITIL Foundations}.
+			La conoscenza dei processi ITIL permette ai dipendenti di poter capire a fondo come è strutturato il nuovo sistema e come poter intevenire professionalmente in caso di bisogno.
+			
+			I dipendenti sottoposti alla formazione tecnica dovranno avere una profonda conoscenza del processo di Business Process Reengineering, e verranno sottoposti a test di valutazione, sia in fase di presa in carico che prima della conclusione del BPR, per verificare la corretta comprensione dei nuovi processi aziendali.
+			
+			% TODO cambiare
+			Il personale continuerà ad essere formato anche dopo la riconsegna del progetto.
+			Verranno calendarizzate sessioni di formazione regolari per poter permettere ai dipendenti di imparare il nuovo sistema e a essere pratici dei nuovi processi.
+			
+			Tali sessioni di aggiornamento possono essere tenute nel normale orario di lavoro, ma, per garantire una corretta e continuativa erogazione dei servizi di Service Desk, ne verranno proposte di più (due o massimo tre) alle quali i dipendenti possono aderire.
+			
+		\subsubsection{Formazione non tecnica}
+			
+			In aggiunta alla formazione del personale a stretto contatto con le tecnologie e l'architettura del \helpdesk, vi è quella anche per i dipendenti dell'\istituto~che non sono tecnici.
+			
+			A tale staff verrà effettuata una completa formazione sulla nuova interfaccia del sistema, sulle nuove funzionalità che sono state aggiunte e sui nuovi metodi per contattare il Service Desk in caso di bisogno.
+			
+			Oltre alla formazione iniziale, che verrà effettuata dai dipendenti di \azienda~presso la sede dell'\istituto, verranno forniti ai dipendenti tutti i documenti e i manuali, non tecnici, che sono stati redatti durante lo svolgimento del progetto e che possono essere di aiuto in caso di studio personale.
+			
+			Come per la formazione tecnica, anche per questo tipo di formazione è necessario un corso di aggiornamento, in questo caso a cadenza minore.
+			Le date e la frequenza di queste sessioni verranno concordate successivamente tra \azienda~e \istituto.
+		

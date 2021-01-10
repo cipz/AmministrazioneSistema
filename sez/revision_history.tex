@@ -1,0 +1,30 @@
+\thispagestyle{plain}
+
+\begin{center}
+	\huge
+	Storico delle revisioni
+\end{center}
+
+\newcommand\larghezzacolonnaDATA{3cm}
+\newcommand\larghezzacolonnaCAMBIAMENTI{9cm}
+
+\begin{table}[H]
+	\centering
+	\renewcommand\arraystretch{2}
+	\begin{tabular}{|>{\raggedright\arraybackslash}m{\larghezzacolonnaDATA}|m{\larghezzacolonnaCAMBIAMENTI}|}
+		\hline
+		\rowcolor{pantone}
+		\multicolumn{1}{|>{\centering\arraybackslash}m{\larghezzacolonnaDATA}|}{\color{white}\textbf{Data}} &
+		\multicolumn{1}{>{\centering\arraybackslash}m{\larghezzacolonnaCAMBIAMENTI}|}{\color{white}\textbf{Descrizione cambiamenti}} \\
+		\hline
+		
+		28 dicembre 2020 & Prima bozza del documento
+		\\\hline
+
+		\today & Continuazione stesura documento
+		\\\hline
+		
+	\end{tabular}
+	\renewcommand\arraystretch{1}
+	\caption{Storico dei cambiamenti del documento}
+\end{table}	

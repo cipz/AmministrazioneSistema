@@ -1,0 +1,56 @@
+\input{config}
+
+\newcommand{\azienda}{ABCip Informatica}
+\newcommand{\mailazienda}{abcip.it}
+\newcommand{\helpdesk}{Help Desk}
+\newcommand{\rollout}{Roll-Out}
+\newcommand{\rollback}{Roll-Back}
+\newcommand{\ultimoaggiornamentotimeline}{23 Novembre 2020}
+\newcommand{\istituto}{Istituto}
+\newcommand{\proponente}{proponente}
+\newcommand{\offerente}{offerente}
+
+\newcounter{obiettivo}[section]
+
+\newcommand{\codiceobiettivo}{
+	\centering
+	\refstepcounter{obiettivo}
+	IGP\_\theobiettivo\
+	\label{igp:\theobiettivo}
+}
+
+\begin{document}
+	
+	\include{titlepage}
+	\pagenumbering{roman}
+	\begingroup
+	\tableofcontents
+	\let\clearpage\relax
+	\newpage
+	\listoftables
+	\listoffigures
+	\endgroup
+    
+    \newpage    
+    
+    \include{sez/revision_history}
+    
+    \newpage
+    
+    \mainmatter
+    
+    \include{sez/introduzione}
+	\include{sez/servizio_helpdesk}    
+  	\include{sez/implementazione}
+  	\include{sez/supporto}
+	
+    \include{sez/contatti}
+
+    \include{sez/bibliografia}
+    
+%    \appendix
+      
+%    \include{sez/appendice_A}
+    
+
+\end{document}
