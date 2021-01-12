@@ -1,7 +1,5 @@
 \chapter{\textit{Deployment} del nuovo sistema informatico}\label{ch:implementazione}
 
-% In questa sezione verranno descritte le dinamiche di gestione per l’implementazione della soluzione, identificando le attività principali e suddividendole in compiti (tasks).
-
 In questo capitolo viene descritta la pianificazione per la gestione del deployment della soluzione proposta da \azienda.
 
 
@@ -41,7 +39,6 @@ Tali attività sono strettamente collegate con gli obiettivi presenti nella Sez.
 	Tuttavia, sono presenti anche alcuni svantaggi, come ad esempio:
 	\begin{itemize}[noitemsep]
 		\renewcommand\labelitemi{--}
-%		\item difficoltà nell'esecuzione dei test prima del passaggio nell'ambiente di produzione;
 		\item impossibilità di eseguire un roll-back affidabile nel lungo periodo, dopo la dismissione del vecchio sistema;
 		\item cambiamento improvviso del workflow lavorativo dei dipendenti e una conseguente diminuzione temporanea di produttività.
 	\end{itemize}
@@ -140,7 +137,6 @@ Tali attività sono strettamente collegate con gli obiettivi presenti nella Sez.
 		
 		In caso di irregolarità o incomprensioni, \azienda~avvertirà il Coordinatore di Progetto, allo scopo di prendere una decisione per risolvere la situazione.
 	
-	% TODO scrivere altro?
 	\subsection{Riconsegna del progetto}
 	
 		Come descritto da capitolato, \azienda si impegna a riconsegnare il progetto completo dopo nove anni passati dalla presa in carico.
@@ -182,7 +178,6 @@ Tali attività sono strettamente collegate con gli obiettivi presenti nella Sez.
 			\renewcommand\labelitemi{--}
 			\item \textbf{Input}: manuali e osservazioni del modello gerarchico attualmente in uso dall'azienda, ovvero analisi della situazione \textit{as-is};
 			\item \textbf{Deliverable}: documento che descrive i nuovi processi creati in base alle necessità aziendali del proponente e documento che descrive le attività necessarie alla transizione dalla struttura gerarchica al nuovo sistema tramite BPR e l'implementazione di questo;
-			%, documento che descrive l'attuale modello gerarchico funzionale dell'istituto situazione attuale dei processi aziendali;
 			\item \textbf{Risorse}: personale esperto in processi aziendali di \azienda~e personale dell'istituto che si occupa dell'organizzazione del modello gerarchico, ciascuno dotato di un proprio computer, adetto all'analisi dell'attuale modello e alla stesura dei nuovi processi aziendali;
 			\item \textbf{Criteri di accettazione}: accettazione da parte del proponente dei nuovi processi stilati;
 			\item \textbf{Responsabili}: analisti con conoscenza di processi aziendali.
@@ -482,7 +477,6 @@ Tali attività sono strettamente collegate con gli obiettivi presenti nella Sez.
 		\end{itemize}	
 
 	\newpage
-%	\subsection{Realizzazione soluzione di continuità}
 	\subsection{Realizzazione di una soluzione di update e upgrade}
 		
 		Come descritto anche nel capitolato, è importante per l'\istituto~mantenere il nuovo sistema costantemente aggiornato.
@@ -531,14 +525,6 @@ Tali attività sono strettamente collegate con gli obiettivi presenti nella Sez.
 		Per tali progetti \azienda~propone che l'\istituto~si appoggi ad una università vicina in maniera da poter istanziare progetti con laureandi, magistrali o triennali, o con dottorandi, che possano sperimentare con nuove tecnologie.
 		
 		Tale necessità viene espressa in {\color{pantone}IGP\_\ref{igp:20}} come ``\textit{sperimentazione di soluzioni innovative}''.
-		
-		%’Istituto richiede all’offerente di proporre e progettare soluzioni
-		%innovative, per l’utilizzo di nuove tecnologie o di applicazioni, che devono essere inserite nel
-		%contesto dei processi dell’Istituto. L’offerente dovrà inserire e illustrare in Offerta Tecnica:
-		%sperimentazioni limitate ma significative richieste dall’Istituto e incluse nell’appalto,
-		%eventuali ulteriori sperimentazioni proposte dall’offerente e incluse nell’appalto;
-		%proposte progettuali innovative da realizzare eventualmente in seguito, in aggiunta ed
-		%estensione all’oggetto del Capitolato, ma non oggetto di appalto.
 	
 		\begin{itemize}[noitemsep]
 			\renewcommand\labelitemi{--}
@@ -619,57 +605,40 @@ Tali attività sono strettamente collegate con gli obiettivi presenti nella Sez.
 	Le versioni MINOR e PATCH verranno rilasciate secondo l'approccio \textit{PULL}, ovvero saranno gli utilizzatori del sistema a decidere il momento in cui effettuare il download e l'update alla nuova versione.
 	In certi casi, come ad esempio il fix di un bug che compromette la sicurezza del sistema, queste potranno tuttavia essere rilasciate in modalità PUSH, obbligando dunque a installare subito la nuova versione.
 	
-%	Questa sezione descrive la gestione della configurazione da seguire durante l’implemen-
-%	tazione del progetto.
-%	Nonostante un’analisi approfondita della gestione della configurazione, scopo del
-%	processo di Service Asset and Configuration Management, esuli dagli scopi di
-%	questo documento, l’Offerente ritiene utile presentare le metodologie e le convenzioni
-%	di massima che intende seguire durante il rollout.
-%	Ricordiamo che l’obiettivo del Configuration Management è di fornire un modello
-%	logico dell’infrastruttura attraverso l’identificazione, il controllo, la gestione e la verifica
-%	di tutte le versioni dei Configuration Items (CI) esistenti. Un CI è un’unità strutturale
-%	fondamentale di un sistema di gestione della configurazione. Alcuni esempi di CI sono:
-%	documenti, software e componenti hardware. I CI sono memorizzati all’interno di un
-%	database, detto CMDB.
-%	Per garantire la possibilità di identificazione univoca, ogni CI sarà identificato da:
-%	∗ ID: identificativo univoco.
-%	∗ Numero di versione: numero nella forma X.Y.Z che segue le norme del
-%	Semantic Versioning (https://semver.org/). In particolare
-%	– X: numero di versione major, che indica un cambiamento radicale e
-%	incompatibile con le versioni precedenti del CI.
-%	– Y: numero di versione minor, che indica un’aggiunta di funzionalità al CI
-%	compatibile con le versione precedenti.
-%	– Z: numero di versione patch/emergency, che indica una risoluzione di
-%	problemi del CI compatibile con le versioni precedenti.
-%	Il numero di versione major 0 dev’essere utilizzato per i CI durante lo sviluppo iniziale.
-%	Dopo il go-live, i CI assumono numero di versione 1.0.0.
-%	L’Offerente prevede di rilasciare le major release esclusivamente con un approccio
-%	push. Questo approccio prevede che l’azione di ricevimento/installazione della release
-%	parta centralmente, avviata da parte dell’Offerente. Questa scelta è dovuta al fatto che
-%	le major release non sono retrocompatibili e l’Offerente reputa che la gestione di due o
-%	più CI con associate due major release diversi potrebbe essere fonte di inefficienze.
-%	Per quanto riguarda le minor e le patch/emergency release verranno rilasciate con un
-%	approccio pull+push. Questo approccio consiste nel rendere disponibile una release
-%	centralmente e permettere agli utenti di applicarla on-demand quando lo ritengono
-%	necessario. Tuttavia, dato che non c’è garanzia alcuna sul fatto che gli utenti prelevino
-%	la release, l’Offerente si occuperà di rilasciare la release in modalità push dopo un certo
-%	limite di tempo, di norma una settimana ma variabile in base alla gravità e all’urgenza
-%	della release. Così facendo si uniscono i vantaggi della modalità push (rilasciare una
-%	release a tutti) a quella pull (dare la possibilità all’utente di scegliere il momento più
-%	opportuno per l’installazione).
-	
 \newpage
 \section{Pianificazione dell'implementazione}\label{sec:pianificazione}
 
-	Vengono quindi presentati in questa sezione alcuni diagrammi di Gantt che fungono come rappresentazione della pianificazone temporale del progetto e delle milestone.
+	Vengono quindi presentati in questa sezione tre diagrammi di Gantt, rappresentati in Fig. \ref{fig:anno_1}, Fig. \ref{fig:anno_2}~e Fig. \ref{fig:anno_3}, che servono come rappresentazione della pianificazone temporale del progetto.
 	Per ciascuna attività vengono assegnate una \textit{data di inizio}, una \textit{data di fine} e una \textit{durata}.
 	Si suppone che la firma del contratto e l'inizio del lavoro avvengano in data 1 Febbraio 2021.
+		
+	\subsection{\rollout~per settori sanitari}	
 	
+		Come accennato in \ref{sec:desc_implementazione}, il \rollout~viene effettuato verticalmente e per ciascun settore sanitario presente nella Fig. \ref{fig:gerarchia}~che rappresenta la gerarchia dell'\istituto.
+		
+		Per primo verrà implementato il \textit{backbone} del sistema, ovvero verrà revisionata l'architettura della rete.
+		Questo verrà fatto partendo dalle connessioni principali, ovvero quelle che portano da e verso il Centro Elaborazione Dati, e successivamente per ciascuno dei dipartimenti.
+		
+		Non appena sarà disponibile una prima versione delle componenti software che compongono il progetto, queste verranno installate in ordine cronologico in ciascun dipartimento, in base ad una lista di priorità scelta tra \azienda~e \istituto.
+		Con l'installazione del software verrà anche rinnovato l'hardware, sempre in maniera cronologica.
+		
+		A colmare il \textit{gap} che verrà a formarsi tra il nuovo sistema e il vecchio, nell'attesa che quest'ultimo venga totalmente dismesso, \azienda~si impegna a scrivere un software intermedio che possa mettere in comunicazione i due sistemi.
+		Nonostante questo implichi un uso di risorse più elevato, è utile in caso di \rollback.
 	
+	\begin{sidewaysfigure}
+		\centering
+		\includegraphics[width=\linewidth-2cm]{img/pianificazione_anno_1.png}
+		\caption{Pianificazione sistema al primo anno}
+		\label{fig:anno_1}
+		\includegraphics[width=\linewidth-2cm]{img/pianificazione_anno_2.png}
+		\label{fig:anno_2}
+		\caption{Pianificazione sistema al secondo anno}
+		\includegraphics[width=\linewidth-2cm]{img/pianificazione_anno_3.png}
+		\label{fig:anno_3}
+		\caption{Pianificazione sistema al terzo anno}
+	\end{sidewaysfigure}
 	
-	% Questi diagrammi sono stati creati tramite il software \textit{Gantt Project}\cite{gantt_project}.
-	
-\newpage
+%\newpage
 \section{\rollback~del sistema}
 
 	% https://everythingwhat.com/what-is-a-rollback-plan-in-change-management
@@ -683,94 +652,8 @@ Tali attività sono strettamente collegate con gli obiettivi presenti nella Sez.
 	È quindi necessario creare un piano di \rollback~per ciascuna nuova versione del sistema.
 	A questo scopo verranno messi a disposizione da \azienda~alcuni template della documentazione necessaria per fissare i passi da seguire in caso di \rollback.
 	Questi variano in base al tipo di installazione che si viene a eseguire, ovvero in caso venga installato semplicemente una \textit{patch}, una \textit{minor release} o una \textit{major release}, come descritte in \ref{sec:configurazione}.
-	
-%\section{Impatto dell'implementazione}
-%
-%	\subsection{Impatto sugli utenti}
-%	\subsection{Impatto sui pazienti}
-%	\subsection{Impatto sulla rete}
-%	\subsection{Impatto sugli SLA}
-%
-%\newpage
-%\section{Gestione andamento del progetto}
-%
-%	In questa sezione sono descritte le tecniche per il monitoraggio dello sviluppo del progetto in maniera da garantire un'implementazione \textit{efficiente} ed \textit{efficace}.
-%	Tali controlli sono  essenziali per poter garantire che \azienda~sta procedendo nella giusta direzione e soddisfa i requisiti posti dall'istituto e, in caso contrario, procedere a correggere tempestivamente le situazioni di errore.
-%	
-%	Per poter controllare l'avanzamento del progetto sono dunque necessari dei parametri e delle metriche oggettive per la valutazione delle performance.
-%	\'E importante quantificare il raggiungimento di certi obiettivi.
-%
-%	Per ciascuna metriche presenti in questa sezione e che \azienda~ha deciso di utilizzare, verranno assegnati dei criteri quali \textit{accettabilità} ed \textit{ottimalità}, con il seguente significato:
-%	\begin{itemize}
-%		\item \textit{accettabilità}: tale valore rappresenta una metrica accettabile e che non ha ancora raggiunto il livello ottimale, questo implica il dover continuare a lavorarci sopra;
-%		\item \textit{ottimalità}: indica che la metrica misurata ha raggiunto un valore ottimale e che quindi l'obiettivo che sta misurando risulta pienamente soddisfatto.
-%	\end{itemize}
-%
-%	Nel caso in cui vi siano valori esterni ai range indicati, allora la metrica misurata risulta ancora non accettabile.
-%
-%	\newpage
-%	\subsection{Soddisfazione del Proponente}
-%			
-%		\azienda~ha deciso che questa metrica verrà misurata tramite meeting quindicinnali che possano dare feedback relativi all'avanzamento del lavoro.
-%		
-%		In ciascuno di questi meeting, gli stakeholder verranno messi a conoscenza dello stato di avanzamento del progetto, delle milestone raggiunte, di quelle prossime al raggiungimento e delle modifiche effettuate.
-%		
-%		Successivamente verranno raccolti i pareri degli stakeholders tramite questionari e testimonianze vocali, quando non risultano all'interno delle domande chieste nel questionario.
-%		
-%		Per ciascuno di questi verrà svolto un lavoro di analisi che indicherà quanto sono soddisfatti gli stakeholders.
-%		
-%		\begin{itemize}[noitemsep]
-%			\item \textit{Range}: 1 - 10;
-%			\item \textit{Range di accettabilità}: 6 - 8, indica che il lavoro sta procedendo nella direzione giusta, ma non è ancora soddisfacente;
-%			\item \textit{Range di ottimalità}: 9 - 10, indica che il lavoro è arrivato al termine e soddisfa pienamente gli stakeholders.
-%		\end{itemize}
-%		
-%		
-%		
-%	\newpage
-%	\subsection{Tempismo nell’esecuzione dei lavori}
-%	
-%%		Le rilevazioni sul tempismo verranno effettuate ogni due settimane, in coincidenza
-%%		con la redazione della documentazione di avanzamento progetto da parte dei membri
-%%		del team dell’Offerente.
-%	
-%	\newpage
-%	\subsection{Rispetto del budget}
-%	
-%%		Dato che la gestione del budget è legata intrinsecamente ad altre variabili,
-%%		come qualità, portata e produttività, tenerla sotto controllo è fondamentale per il
-%%		successo del progetto.
-%%		Le rilevazioni sul budget verranno effettuate, come per la metrica precedente, ogni
-%%		due settimane. Verranno indicate come scostamento percentuale rispetto al budget
-%%		pianificato per quel periodo
-%	
-%	\newpage
-%	\subsection{Rispetto degli SLA}
-%		
-%%		Concentrarsi esclusivamente sull’imple-
-%%		mentazione della nuova soluzione e tralasciare la fornitura di servizi di qualità non è
-%%		accettabile.
-%%		Le rilevazioni per questa metrica verranno effettuate mensilmente, anche se il
-%%		periodo di osservazione per gli SLA identificato nel capitolato risulta essere di 4 mesi.
-%%		L’Offerente ritiene che misurare con questa frequenza possa dare risultati più tempestivi
-%%		durante la fase di implementazione.
-%	
-%	\newpage
-%	\subsection{Risolvimento incidenti al primo livello}
-%	
-%%		La rilevazione verrà effettuata su base mensile per tenere sotto controllo le perfor-
-%%		mance del Service Desk.
-%	
-%\newpage
-%\section{Livelli di servizio garantiti}
 
-%
-%livelli di servizio garantiti, partendo da quelli minimi indicati nel presente Capitolato Tecnico;
-%3. la presa in carico degli attuali sistemi fino alla loro sostituzione, secondo la proposta progettuale dell’offerente, o il mantenimento ed adeguamento degli stessi nel rispetto dei
-%la presa in carico degli attuali sistemi fino alla loro sostituzione, secondo la proposta progettuale dell’offerente, o il mantenimento ed adeguamento degli stessi nel rispetto dei requisiti e dei livelli di servizio definiti nel presente Capitolato Tecnico;
-%progettuale dell’offerente, o il mantenimento ed adeguamento degli stessi nel rispetto dei requisiti e dei livelli di servizio definiti nel presente Capitolato Tecnico;
-
-%\newpage
+\newpage
 \section{Criteri di accettazione}
 
 	Per ciascuna attività, come quelle descritte in Sez. \ref{sec:attivita_principali}, vi sono alcuni \textit{criteri di accettazione} che ne decretano la corretta conclusione.
